@@ -1,5 +1,5 @@
 import { Component } from '@angular/core';
-import { RouterOutlet } from '@angular/router';
+import { Router, RouterOutlet } from '@angular/router';
 
 @Component({
   selector: 'app-root',
@@ -10,4 +10,9 @@ import { RouterOutlet } from '@angular/router';
 })
 export class AppComponent {
   title = 'bus-management-ui';
+
+  constructor(private router: Router) {
+    // Navigate to the desired route when the application starts
+    this.router.navigate(['/bus-management']);
+  }
 }
